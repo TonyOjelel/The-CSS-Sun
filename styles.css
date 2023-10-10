@@ -1,0 +1,208 @@
+html, body, div {
+  height: 100%;
+}
+
+html {
+  font-size: 1vmin;
+  background: radial-gradient(circle at top, #1a0606 50%, #220D08);
+}
+
+body {
+  margin: auto;
+}
+
+div {
+  transform-style: preserve-3d;
+  perspective: 100em;
+  position: relative;
+  overflow: hidden;
+}
+div *, div *:before, div *:after, div:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+
+stars:before, stars:after {
+  transform: translate3d(-500vw, -600vh, -1000rem) scale(10);
+  content: "";
+  width: 0.3rem;
+  height: 0.3rem;
+  background: #fff;
+  box-shadow: 117vw 39vh 0.1rem #e88f9a , 62vw 63vh 0.1rem #e88f9a , 28vw 140vh 0.1rem #fff , 136vw 121vh 0.1rem #e88f9a , 68vw 145vh 0.1rem #e88f9a , 42vw 71vh 0.1rem #fff , 13vw 77vh 0.1rem #e88f9a , 127vw 22vh 0.1rem #fff , 111vw 128vh 0.1rem #e88f9a , 104vw 141vh 0.1rem #e88f9a , 51vw 1vh 0.1rem #e88f9a , 108vw 41vh 0.1rem #e88f9a , 2vw 86vh 0.1rem #fff , 87vw 12vh 0.1rem #e88f9a , 51vw 124vh 0.1rem #fff , 110vw 30vh 0.1rem #fff , 26vw 8vh 0.1rem #fff , 135vw 122vh 0.1rem #e88f9a , 126vw 13vh 0.1rem #fff , 47vw 95vh 0.1rem #fff , 64vw 145vh 0.1rem #fff , 149vw 44vh 0.1rem #fff , 63vw 144vh 0.1rem #fff , 5vw 96vh 0.1rem #e88f9a , 17vw 63vh 0.1rem #e88f9a , 92vw 26vh 0.1rem #e88f9a , 42vw 142vh 0.1rem #e88f9a , 133vw 41vh 0.1rem #e88f9a , 28vw 71vh 0.1rem #fff , 108vw 127vh 0.1rem #fff , 124vw 121vh 0.1rem #fff , 146vw 4vh 0.1rem #e88f9a , 12vw 120vh 0.1rem #fff , 107vw 37vh 0.1rem #e88f9a , 61vw 50vh 0.1rem #e88f9a , 47vw 97vh 0.1rem #e88f9a , 46vw 21vh 0.1rem #fff , 65vw 14vh 0.1rem #fff , 40vw 132vh 0.1rem #e88f9a , 89vw 102vh 0.1rem #e88f9a , 106vw 83vh 0.1rem #e88f9a , 110vw 55vh 0.1rem #fff , 54vw 89vh 0.1rem #e88f9a , 127vw 75vh 0.1rem #fff , 4vw 105vh 0.1rem #fff , 96vw 101vh 0.1rem #e88f9a , 134vw 42vh 0.1rem #fff , 50vw 30vh 0.1rem #e88f9a , 91vw 38vh 0.1rem #fff , 54vw 80vh 0.1rem #e88f9a , 137vw 56vh 0.1rem #e88f9a , 26vw 69vh 0.1rem #fff , 32vw 59vh 0.1rem #e88f9a , 53vw 32vh 0.1rem #e88f9a , 150vw 27vh 0.1rem #fff , 24vw 126vh 0.1rem #fff , 70vw 1vh 0.1rem #fff , 38vw 14vh 0.1rem #fff , 136vw 35vh 0.1rem #e88f9a , 84vw 137vh 0.1rem #fff , 46vw 72vh 0.1rem #fff , 11vw 105vh 0.1rem #fff , 16vw 103vh 0.1rem #fff , 136vw 87vh 0.1rem #fff , 70vw 98vh 0.1rem #e88f9a , 124vw 4vh 0.1rem #e88f9a , 34vw 91vh 0.1rem #e88f9a , 48vw 122vh 0.1rem #e88f9a , 106vw 14vh 0.1rem #e88f9a , 40vw 39vh 0.1rem #fff , 34vw 59vh 0.1rem #e88f9a , 39vw 71vh 0.1rem #e88f9a , 37vw 145vh 0.1rem #fff , 96vw 7vh 0.1rem #e88f9a , 88vw 143vh 0.1rem #fff , 34vw 29vh 0.1rem #e88f9a , 136vw 91vh 0.1rem #fff , 78vw 56vh 0.1rem #fff , 8vw 16vh 0.1rem #fff , 46vw 131vh 0.1rem #fff , 106vw 30vh 0.1rem #e88f9a , 72vw 32vh 0.1rem #e88f9a , 66vw 105vh 0.1rem #fff , 107vw 64vh 0.1rem #fff , 20vw 150vh 0.1rem #fff , 120vw 96vh 0.1rem #fff , 59vw 43vh 0.1rem #fff , 112vw 12vh 0.1rem #e88f9a , 147vw 145vh 0.1rem #fff , 85vw 90vh 0.1rem #e88f9a , 110vw 145vh 0.1rem #fff , 2vw 74vh 0.1rem #e88f9a , 50vw 40vh 0.1rem #e88f9a , 128vw 36vh 0.1rem #e88f9a , 133vw 128vh 0.1rem #e88f9a , 121vw 51vh 0.1rem #fff , 25vw 10vh 0.1rem #fff , 149vw 34vh 0.1rem #fff , 144vw 104vh 0.1rem #e88f9a , 137vw 123vh 0.1rem #fff;
+  right: 0;
+  margin: auto;
+}
+
+sun:before {
+  background: radial-gradient(closest-side, #FFFDA4, #FB7417 98%, rgba(255, 255, 255, 0));
+  transform: translate3d(0, 0, 5rem);
+}
+sun:after {
+  background: #D73A4D;
+  transform: translate3d(0, 0, 40rem) scale(0.75);
+  -webkit-mask-image: radial-gradient(closest-side, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), #fff 90%, rgba(255, 255, 255, 0));
+  opacity: 0.5;
+}
+sun, sun > u, sun:before, sun:after, sun > u > u {
+  width: 70em;
+  border-radius: 50%;
+  margin: auto;
+  inset: 0;
+  aspect-ratio: 1/1;
+}
+sun > u {
+  animation: r 10s linear infinite;
+}
+sun > u, sun > u > u {
+  box-shadow: 0 0 3em #FFFDA4;
+  background: #FFFDA4;
+}
+sun > u > u:nth-of-type(1) {
+  box-shadow: 2em 0 3em #FFFDA4;
+}
+sun > u > u:nth-of-type(1) {
+  transform: rotateY(810deg) rotateX(0deg) rotate(570deg);
+  animation: move 10s -11s linear infinite;
+}
+sun > u > u:nth-of-type(2) {
+  transform: rotateY(820deg) rotateX(-20deg) rotate(640deg);
+  animation: move 10s -10s linear infinite;
+}
+sun > u > u:nth-of-type(3) {
+  transform: rotateY(830deg) rotateX(30deg) rotate(870deg);
+  animation: move 10s -9s linear infinite;
+}
+sun > u > u:nth-of-type(4) {
+  transform: rotateY(840deg) rotateX(40deg) rotate(1310deg);
+  animation: move 10s -8s linear infinite;
+}
+sun > u > u:nth-of-type(5) {
+  transform: rotateY(850deg) rotateX(-40deg) rotate(1210deg);
+  animation: move 10s -7s linear infinite;
+}
+sun > u > u:nth-of-type(6) {
+  transform: rotateY(860deg) rotateX(30deg) rotate(950deg);
+  animation: move 10s -6s linear infinite;
+}
+sun > u > u:nth-of-type(7) {
+  transform: rotateY(870deg) rotateX(30deg) rotate(710deg);
+  animation: move 10s -5s linear infinite;
+}
+sun > u > u:nth-of-type(8) {
+  transform: rotateY(880deg) rotateX(50deg) rotate(850deg);
+  animation: move 10s -4s linear infinite;
+}
+sun > u > u:nth-of-type(9) {
+  transform: rotateY(890deg) rotateX(0deg) rotate(680deg);
+  animation: move 10s -3s linear infinite;
+}
+sun > u > u:nth-of-type(10) {
+  transform: rotateY(900deg) rotateX(40deg) rotate(820deg);
+  animation: move 10s -2s linear infinite;
+}
+sun > u > u:nth-of-type(11) {
+  transform: rotateY(910deg) rotateX(-40deg) rotate(1190deg);
+  animation: move 10s -1s linear infinite;
+}
+sun > u > u:nth-of-type(12) {
+  transform: rotateY(920deg) rotateX(-20deg) rotate(760deg);
+  animation: move 10s 0s linear infinite;
+}
+sun > u > u:nth-of-type(13) {
+  transform: rotateY(930deg) rotateX(-10deg) rotate(1250deg);
+  animation: move 10s 1s linear infinite;
+}
+sun > u > u:nth-of-type(14) {
+  transform: rotateY(940deg) rotateX(-40deg) rotate(1000deg);
+  animation: move 10s 2s linear infinite;
+}
+sun > u > u:nth-of-type(15) {
+  transform: rotateY(950deg) rotateX(10deg) rotate(910deg);
+  animation: move 10s 3s linear infinite;
+}
+sun > u > u:nth-of-type(16) {
+  transform: rotateY(960deg) rotateX(10deg) rotate(900deg);
+  animation: move 10s 4s linear infinite;
+}
+sun > u > u:nth-of-type(17) {
+  transform: rotateY(970deg) rotateX(40deg) rotate(970deg);
+  animation: move 10s 5s linear infinite;
+}
+sun > u > u:nth-of-type(18) {
+  transform: rotateY(980deg) rotateX(-40deg) rotate(760deg);
+  animation: move 10s 6s linear infinite;
+}
+sun > u > u:nth-of-type(19) {
+  transform: rotateY(990deg) rotateX(10deg) rotate(620deg);
+  animation: move 10s 7s linear infinite;
+}
+sun > u > u:nth-of-type(20) {
+  transform: rotateY(1000deg) rotateX(30deg) rotate(1300deg);
+  animation: move 10s 8s linear infinite;
+}
+sun > u > u:nth-of-type(21) {
+  transform: rotateY(1010deg) rotateX(0deg) rotate(1110deg);
+  animation: move 10s 9s linear infinite;
+}
+sun > u > u:nth-of-type(22) {
+  transform: rotateY(1020deg) rotateX(-30deg) rotate(1130deg);
+  animation: move 10s 10s linear infinite;
+}
+sun > u > u:nth-of-type(23) {
+  transform: rotateY(1030deg) rotateX(-20deg) rotate(1320deg);
+  animation: move 10s 11s linear infinite;
+}
+sun > u > u:nth-of-type(24) {
+  transform: rotateY(1040deg) rotateX(-20deg) rotate(600deg);
+  animation: move 10s 12s linear infinite;
+}
+
+@keyframes r {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.sig {
+  position: absolute;
+  left: auto;
+  right: 1rem;
+  top: 1rem;
+  font-size: 0.5rem;
+  color: #fff;
+  width: 10em;
+  transform: skewX(10deg) scaleY(0.45) rotate(2deg);
+  mix-blend-mode: difference;
+}
+.sig, .sig * {
+  height: 9.25em;
+  overflow: hidden;
+  border-radius: 0.5em;
+}
+.sig:before, .sig *:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5em;
+  height: 5em;
+  background: currentColor;
+  transform: translate3d(-2.5em, 0, 0) rotate(-45deg);
+  box-shadow: -3em 3em 0 0 currentColor;
+  border-radius: 0.5em 2em 0.5em 2em;
+}
+.sig * {
+  width: 5em;
+  transform: translate3d(3.75em, 0, 0) scaleY(0.95);
+  display: block !important;
+}
+.sig *:before {
+  transform: translate3d(-3em, -2em, 0) rotate(-45deg);
+  box-shadow: -3em 3em 0 0 currentColor, -6em 6em 0 0 currentColor;
+  border-radius: 0.5em;
+}
+
+/*# sourceMappingURL=styles.css.map */

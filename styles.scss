@@ -1,0 +1,153 @@
+$blk: #1a0606;
+$none: rgba(#fff,0);
+$white: #fff;
+$red: #D73A4D;
+$sun: #FFFDA4;
+$s2: #FB7417;
+
+html, body, div {
+    height: 100%;
+}
+
+html {
+    font-size: 1vmin;
+    background: radial-gradient( circle at top, $blk 50%, #220D08);
+}
+
+body {
+    margin: auto;
+}
+
+div {
+    transform-style: preserve-3d;
+    perspective: 100em;
+    position: relative;
+    overflow: hidden;
+
+    *, *:before, *:after, &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        box-sizing: border-box;
+        transform-style: preserve-3d;
+    }
+}
+
+$starscolour: #fff,lighten($red,20 );
+
+@function stars ($a, $b) {
+    $value: '#{random(150)}vw #{random(150)}vh '+ $b + ' ' + '#{nth($starscolour, random(length($starscolour)))}';
+
+    @for $i from 2 through $a {
+        $value: '#{$value} , #{random(150)}vw #{random(150)}vh '+ $b + ' ' + '#{nth($starscolour, random(length($starscolour)))}';
+    }
+
+    @return unquote($value);
+}
+
+$stars: stars(100, .1rem);
+
+stars {
+    &:before, &:after {
+        transform: translate3d(-500vw,-600vh, -1000rem) scale(10);
+        content: '';
+        width: .3rem;
+        height: .3rem;
+        background: #fff;
+        box-shadow: $stars;
+        right: 0;
+        margin: auto;
+    }
+}
+
+sun {
+    &:before {
+        background: radial-gradient(closest-side, $sun, $s2 98%,$none);
+        transform: translate3d(0,0,5rem);
+    }
+
+    &:after {
+        background: $red;
+        transform: translate3d(0,0,40rem) scale(.75);
+        -webkit-mask-image: radial-gradient(closest-side,$none,$none, #fff 90%, $none);
+        opacity: .5;
+    }
+
+    &, & > u, &:before, &:after, & > u > u {
+        width: 70em;
+        border-radius: 50%;
+        margin: auto;
+        inset: 0;
+        aspect-ratio: 1/1;
+    }
+
+    & > u {
+        animation: r 10s linear infinite;
+
+        &, & > u {
+            box-shadow: 0 0 3em $sun;
+            background: $sun;
+        }
+
+        & > u:nth-of-type(1) {
+            box-shadow: 2em 0 3em $sun;
+        }
+
+        @for $i from 1 through 24 {
+            & > u:nth-of-type(#{$i}) {
+                transform: rotateY(($i + 80) * 10deg) rotateX((random(10) - 5) * 10deg) rotate((random(90) + 45 ) * 10deg);
+                animation: move 10s (($i - 12) * 1s) linear infinite;
+            }
+        }
+    }
+}
+
+@keyframes r {
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.sig {
+    &, * {
+        height: 9.25em;
+        overflow: hidden;
+        border-radius: .5em;
+    }
+
+    position: absolute;
+    left: auto;
+    right: 1rem;
+    top: 1rem;
+    font-size: .5rem;
+    color: $white;
+    width: 10em;
+    transform: skewX(10deg) scaleY(.45) rotate(2deg);
+    mix-blend-mode: difference;
+
+    &:before, *:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5em;
+        height: 5em;
+        background: currentColor;
+        transform: translate3d(-2.5em,0,0) rotate(-45deg);
+        box-shadow: -3em 3em 0 0 currentColor;
+        border-radius: .5em 2em .5em 2em;
+    }
+
+    * {
+        width: 5em;
+        transform: translate3d(3.75em,0,0) scaleY(.95);
+        display: block !important;
+
+        &:before {
+            transform: translate3d(-3em,-2em,0) rotate(-45deg);
+            box-shadow: -3em 3em 0 0 currentColor, -6em 6em 0 0 currentColor;
+            border-radius: .5em;
+        }
+    }
+}
